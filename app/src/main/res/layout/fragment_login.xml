@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:id="@+id/fragmentLoginLayout"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/loginLayoutImageViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/barter_image" />
+
+        <ImageView
+            android:id="@+id/loginLayoutImageViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginLayoutTextInputPassword"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="onClickLogin"
+            android:src="@drawable/ic_login_button" />
+
+        <TextView
+            android:id="@+id/loginLayoutLoginText"
+            style="@style/viewParent"
+            android:layout_below="@+id/loginLayoutImageViewBackground"
+            android:layout_alignParentLeft="true"
+            android:text="@string/login"
+            android:textColor="@color/blackTextColor"
+            android:textSize="@dimen/headerTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginLayoutImageViewLogin"
+            android:layout_marginBottom="20dp"
+            android:onClick="onClickNavigateToRegisterFragment"
+            android:text="@string/need_an_account_nregister_now"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/loginLayoutTextInputUsername"
+            style="@style/parent.TextLayout"
+            android:layout_below="@id/loginLayoutLoginText"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+
+            <EditText
+                android:id="@+id/loginLayoutEditTextUsername"
+                style="@style/modifiedEditText"
+                android:hint="@string/username"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginLayoutTextInputPassword"
+            style="@style/parent.TextLayout"
+            android:layout_below="@+id/loginLayoutTextInputUsername"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+
+            <EditText
+                android:id="@+id/loginLayoutEditTextPassword"
+                style="@style/modifiedEditText"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myConstraintLayoutMyItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/imageViewMyItem"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/clothes"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/card_interestsMyItem"
+            app:layout_constraintBottom_toBottomOf="@+id/myConstraintLayoutMyItem"
+            app:layout_constraintEnd_toEndOf="@+id/myConstraintLayoutMyItem"
+            >
+
+            <ImageButton
+                android:id="@+id/editImageButtonMyItem"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/icon_edit" />
+
+            <ImageButton
+                android:id="@+id/removeImageButtonMyItem"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/icon_remove" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/card_usernameMyItem"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Username goes here"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/card_titleMyItem"
+            app:layout_constraintTop_toBottomOf="@+id/card_titleMyItem" />
+
+        <TextView
+            android:id="@+id/card_interestsMyItem"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Interests is here"
+            app:layout_constraintStart_toStartOf="@+id/card_usernameMyItem"
+            app:layout_constraintTop_toBottomOf="@+id/card_usernameMyItem" />
+
+        <TextView
+            android:id="@+id/card_titleMyItem"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Title goes here"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMyItem" />
+
+        <TextView
+            android:id="@+id/itemIdTextViewMyItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMyItem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

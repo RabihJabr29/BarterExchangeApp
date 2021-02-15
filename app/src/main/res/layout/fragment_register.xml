@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <ImageView
+        android:id="@+id/registerLayoutImageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:src="@drawable/barter_image" />
+
+    <ImageView
+        android:id="@+id/registerLayoutImageViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerLayoutTextInputPassword"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onClickRegister"
+        android:src="@drawable/ic_login_button" />
+
+    <TextView
+        android:id="@+id/registerLayoutRegisterText"
+        style="@style/viewParent"
+        android:layout_below="@+id/registerLayoutImageViewBackground"
+        android:layout_alignParentLeft="true"
+        android:text="@string/register"
+        android:textColor="@color/blackTextColor"
+        android:textSize="@dimen/headerTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerLayoutImageViewLogin"
+        android:layout_marginBottom="20dp"
+        android:onClick="onClickNavigateToLoginFragment"
+        android:text="@string/already_have_an_account_nlogin_now"
+        android:textAlignment="center"
+        android:textColor="@color/lightBlue"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/registerLayoutTextInputUsername"
+        style="@style/parent.TextLayout"
+        android:layout_below="@id/registerLayoutTextInputEmail"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+        <EditText
+            android:id="@+id/registerLayoutEditTextUsername"
+            style="@style/modifiedEditText"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerLayoutTextInputPassword"
+        style="@style/parent.TextLayout"
+        android:layout_below="@+id/registerLayoutTextInputUsername"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+        <EditText
+            android:id="@+id/registerLayoutEditTextPassword"
+            style="@style/modifiedEditText"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerLayoutTextInputName"
+        style="@style/parent.TextLayout"
+        android:layout_below="@+id/registerLayoutRegisterText"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+        <EditText
+            android:id="@+id/registerLayoutEditTextName"
+            style="@style/modifiedEditText"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerLayoutTextInputEmail"
+        style="@style/parent.TextLayout"
+        android:layout_below="@id/registerLayoutTextInputName"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+
+        <EditText
+            android:id="@+id/registerLayoutEditTextEmail"
+            style="@style/modifiedEditText"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</RelativeLayout>
